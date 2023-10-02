@@ -5,11 +5,11 @@
  * @param {string} fahren temperature in degrees F
  * @returns {number} the number of degrees C
  */
-function convertToCelsius(fahren) {
+function convertToCelsius(fahren) {}
   // Parse the input string to a number and convert Fahrenheit to Celsius
-  const fahrenheit = parseFloat(fahren);
-  const celsius = (fahrenheit - 32) * (5/9);
-  return celsius;
+  function convertToCelsius(fahren) {
+  let celc = (fahre- 32) * 5/9;
+  return celc
 }
 
 /**
@@ -27,21 +27,21 @@ function convertToCelsius(fahren) {
  * @param {number} fahren
  * @param {number} celc
  */
+function createMessage(fahren, celc) {}
 function createMessage(fahren, celc) {
-  let feeling;
-  if (fahren < 32 || celc < 0) {
-    feeling = "very cold";
-  } else if (fahren < 64 || celc < 18) {
-    feeling = "cold";
-  } else if (fahren < 86 || celc < 30) {
-    feeling = "warm";
-  } else if (fahren < 100 || celc < 37) {
-    feeling = "hot";
-  } else {
-    feeling = "very hot";
+  let feel;
+  if (celc < 32) {
+    feel = "very cold";
+  } else if (celc < 64) {
+    feel = "cold";
+  } else if (celc < 86) {
+    feel = "warm";
+  } else if (celc < 100) {
+    feel = "hot";
   }
-
-  console.log(`Fahrenheit: ${fahren}°F, Celsius: ${celc}°C - Feels ${feeling}`);
+  let message = '${fahren} degrees Fahrenheit is ${celc.toFixed(2)}
+  degrees celsius, which feels ${feel}.';
+  return message;
 }
 
 /**
@@ -49,17 +49,24 @@ function createMessage(fahren, celc) {
  * @param {number} limit
  * @returns {number} a number between 0 and the int passed in
  */
+function rand(limit) {}
 function rand(limit) {
-  return Math.floor(Math.random() * (limit + 1));
+  return Math.floor(Math.random) * (limit+1);
 }
 
+function main() {}
 
-const fahrenheit = 75;
-const celsius = convertToCelsius(fahrenheit);
-createMessage(fahrenheit, celsius);
-const randomNum = rand(10);
-console.log(`Random Number: ${randomNum}`);
+let input = parseFloat(prompt("Enter a temerature in Fahrenheit"));
 
+if (!isNaN(input)) {
+let celc = convertToCelsius(input, celc);
+
+alert(message);
+} else {
+  alert(Invalid input. Please enter a valid Number.");
+}
+
+main();
 
 // -------------------- DONT NOT CHANGE THE CODE BELOW ---------------------- //
 
